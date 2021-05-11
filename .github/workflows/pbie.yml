@@ -16,3 +16,4 @@ jobs:
         DATE_TIME: "${{ steps.current-date-time.outputs.formattedTime }}" 
       run: |
         echo $DATE_TIME
+        echo $GITHUB_ACTOR
