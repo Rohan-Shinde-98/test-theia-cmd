@@ -7,12 +7,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get current time
-      uses: 1466587594/get-current-time@v1
-      id: current-date-time
-      with:
-        format: YYYY-MM-DD
-    - name: publish
-      env:
-        DATE_TIME: "${{ steps.current-date-time.outputs.formattedTime }}" 
       run: |
         echo $GITHUB_ACTOR
