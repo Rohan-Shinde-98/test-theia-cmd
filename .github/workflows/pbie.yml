@@ -1,0 +1,11 @@
+name: manually triggered workflows
+on:
+  workflow_dispatch
+jobs:
+  test-cmd:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get current time
+      run: |
+        echo $GITHUB_ACTOR
